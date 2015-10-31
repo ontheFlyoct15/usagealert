@@ -29,7 +29,6 @@ public class UsageAlert {
 		String custIdcump = null;
 		String query = "select customerId, no_of_notification from DATA_USAGE.USER_PROFILE where perconsup = " + range
 				+ " and no_of_notification = " + noofAlert + " ALLOW FILTERING";
-		System.out.println("final " + query);
 		ResultSet rs1 = sess.execute(query);
 		for (Row row : rs1) {
 			custIdcump = row.getString("customerId");
